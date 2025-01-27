@@ -20,13 +20,13 @@
         compatible = "zmk,keymap";
 
         aptmak {
-            label = "APT";
+            label = "CLMK";
 
             bindings = <
-                               &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y
-                &hl LCTRL R    &hl LALT S     &hl LGUI T     &hl LSHFT H    &hl RALT K     &hr RALT X     &hr RSHFT N    &hr RGUI A     &hr LALT I     &hr RCTRL O
-                               &kp C          &kp G          &kp D                                        &kp M          &comsem        &dotcol
-                                                             &my_lt NUM SQT &my_lt NAV SPACE &my_lt SYM E &my_lt FUN TAB
+                               &kp W          &kp F          &kp P          &kp K          &kp J          &kp L          &kp U          &kp Y
+                &hl LGUI A    &hl LALT R     &hl LCTL S     &hl LSHFT T    &hl RALT G     &hr RALT M     &hr RSHFT N    &hr LCTL E     &hr LALT I     &hr LGUI O
+                               &kp X          &kp C          &kp D                                        &kp H          &comsem        &dotcol
+                                                             &my_lt NUM SPACE &my_lt NAV BSPC &my_lt SYM TAB &my_lt FUN RET
             >;
         };
         numbers {
@@ -34,7 +34,7 @@
 
             bindings = <
                                   &none             &none                &none              &none          &none          &kp N7         &kp N8         &kp N9
-                &hl LCTRL KP_PLUS &hl LALT KP_MINUS &hl LGUI KP_ASTERISK &hl LSHFT KP_SLASH &kp RALT       &none          &kp N4         &kp N5         &kp N6         &kp DOT
+                &hl LGUI KP_PLUS &hl LALT KP_MINUS &hl LCTL KP_ASTERISK &hl LSHFT KP_SLASH &kp RALT       &none          &kp N4         &kp N5         &kp N6         &kp DOT
                                   &kp N9            &kp N8               &kp N7                                           &kp N1         &kp N2         &kp N3
                                                              &trans         &trans         &kp E          &kp N0
             >;
@@ -43,9 +43,9 @@
             label = "NAV";
 
             bindings = <
-                               &none          &none          &none           &kp C_VOL_UP   &kp LC(X)      &kp LC(INSERT) &kp LS(INSERT) &kp INSERT
-                &sk LCTRL      &sk LALT       &sk LGUI       &sk LSHFT       &kp C_VOL_DN   &kp C_MUTE     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT
-                               &kp HOME       &kp PG_DN      &kp END                                       &kp HOME       &kp PG_UP      &kp END
+                               &none          &none          &none           &kp C_VOL_UP   &kp LC(X)      &kp HOME       &kp UP         &kp END
+                &sk LGUI       &sk LALT       &sk LCTL       &sk LSHFT       &kp C_VOL_DN   &kp C_MUTE     &kp LEFT       &kp DOWN       &kp RIGHT         &none
+                               &kp PG_UP      &kp PG_DN      &none                                         &none          &none          &none
                                                              &trans          &trans         &trans         &trans
             >;
         };
@@ -59,18 +59,6 @@
                                                              &kp TILDE        &trans         &trans         &trans
             >;
         };
-#ifdef ZILPZALP_BLE_FLAG
-        function {
-            label = "FUN";
-
-            bindings = <
-                               &bootloader    &trans         &bt BT_CLR_ALL &bt BT_PRV     &kp F12        &kp F7         &kp F8         &kp F9
-                &bootloader    &kp F12        &kp F11        &kp F10        &bt BT_NXT     &kp F11        &kp F4         &kp F5         &kp F6         &kp F10
-                               &kp F9         &kp F8         &kp F7                                       &kp F1         &kp F2         &kp F3
-                                                             &out OUT_TOG   &trans         &trans         &trans
-            >;
-#endif
-#ifndef ZILPZALP_BLE_FLAG
         function {
             label = "FUN";
 
@@ -80,7 +68,6 @@
                                &kp F9         &kp F8         &kp F7                                       &kp F1         &kp F2         &kp F3
                                                              &trans         &trans         &trans         &trans
             >;
-#endif
         };
 
     };
