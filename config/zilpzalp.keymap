@@ -23,8 +23,8 @@
             label = "CLMK";
 
             bindings = <
-                               &kp W          &kp F          &kp P          &kp K          &kp J          &kp L          &kp U          &kp Y
-                &hl LGUI A    &hl LALT R     &hl LCTL S     &hl LSHFT T    &hl RALT G     &hr RALT M     &hr RSHFT N    &hr LCTL E     &hr LALT I     &hr LGUI O
+                               &kp W          &kp F          &kp P          &kp B          &kp M          &kp L          &kp U          &kp Y
+                &hl LGUI A     &hl LALT R     &hl LCTL S     &hl LSHFT T    &hl RALT G     &hr RALT K     &hr RSHFT N    &hr LCTL E     &hr LALT I     &hr LGUI O
                                &kp X          &kp C          &kp D                                        &kp H          &comsem        &dotcol
                                                              &my_lt NUM SPACE &my_lt NAV BSPC &my_lt SYM TAB &my_lt FUN RET
             >;
